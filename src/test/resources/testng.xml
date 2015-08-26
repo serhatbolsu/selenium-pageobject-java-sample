@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All Tests" verbose="5" data-provider-thread-count="1">
+	<test name="Login" enabled="true">
+		<parameter name="path" value="/"/>
+		<parameter name="username" value="meltem+master@vngrs.com"></parameter>
+		<parameter name="password" value="Meltem123"></parameter>
+		<classes>
+			<class name="leaf.qa.pages.LoginPageTest"/>
+		</classes>
+	</test>	
+	<test name="Employee Add">
+		<classes>
+			<class name="leaf.qa.pages.EmployeeTest">
+				<methods>
+					<include name="addNewEmployeeSimple"/>
+					<!--<include name="addNewEmployeeComplex"/>-->
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Employee Add Complex">
+		<classes>
+			<class name="leaf.qa.pages.EmployeeTest">
+				<methods>
+					<!--<include name="addNewEmployeeSimple"/>-->
+					<include name="addNewEmployeeComplex"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

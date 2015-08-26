@@ -1,0 +1,1 @@
+Place in this folder the chrome driver for your OS (chromedriver.exe for Win or chromedriver for Mac or Linux)  if you need it.
